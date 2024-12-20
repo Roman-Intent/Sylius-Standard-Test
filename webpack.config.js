@@ -14,7 +14,7 @@ const shopConfig = SyliusShop.getWebpackConfig(path.resolve(__dirname));
 Encore
     .setOutputPath('public/build/app/shop')
     .setPublicPath('/build/app/shop')
-    .addEntry('app-shop-entry', './assets/shop/entrypoint.js')
+    .addEntry('app-shop-entry', ['./assets/shop/entrypoint.js', './assets/js/cart-quantity.js'])
     .disableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
